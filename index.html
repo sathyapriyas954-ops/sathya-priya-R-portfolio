@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SATHYA PRIYA R</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:#e6eef8;background:#02030a;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#bgCanvas{position:fixed;inset:0;z-index:0}
+
+/* Layout */
+.app{position:relative;min-height:100vh;display:flex;flex-direction:column;z-index:2;}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;backdrop-filter:blur(6px);}
+.brand{font-weight:600;font-size:18px}
+nav{display:flex;gap:12px}
+
+/* Buttons - Teal */
+.nav-btn, .btn-primary, .contact-box button {
+    background:#008080; /* teal */
+    color:#fff;
+    border:none;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:all 0.2s;
+}
+.nav-btn:hover, .btn-primary:hover, .contact-box button:hover {
+    background:#20b2aa; /* lighter teal */
+}
+/* Blink dark teal on click */
+@keyframes blink-teal {
+  0% { background:#004d4d; }
+  50% { background:#008080; }
+  100% { background:#004d4d; }
+}
+.blink {
+  animation: blink-teal 0.4s ease;
+}
+
+/* Container */
+.container{width:100%;max-width:1100px;margin:40px auto;padding:28px;backdrop-filter:blur(6px)}
+
+/* Hero Section */
+.hero{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
+.hero .left{flex:1;min-width:220px;text-align:center}
+.hero .right{flex:2;min-width:300px;text-align:center}
+.hero h1{font-size:28px;margin-bottom:8px;}
+.hero h2{font-size:24px;margin-bottom:12px;color:#a9d0ff;}
+.hero p{color:#cfe6ff;margin-bottom:16px;}
+.hero-links{display:flex;gap:15px;justify-content:center;margin-top:10px;}
+.hero-links a{color:#60d3fa;font-weight:600;transition:color 0.2s}
+.hero-links a:hover{color:#72e9f4}
+
+/* Avatar with Teal border + brighter glow */
+.avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin:auto;
+    margin-bottom:12px;
+    border: 3px solid #00ffff; /* bright teal */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00ffff;
+}
+.avatar:hover{
+    border-color: #20fafa;
+    box-shadow: 0 0 25px #00f5ff;
+}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+/* Boxes */
+.card, .education-box, .skills-box, .achieve-box{background:rgba(255,255,255,0.05);padding:20px;border-radius:12px;margin-bottom:20px;border:2px solid rgba(100,149,237,0.5);}
+.card h3, .education-box h4, .skills-box h4, .achieve-box h4{margin-bottom:10px}
+
+/* Contact */
+.contact-box{background:rgba(0,0,0,0.4);padding:24px;border-radius:12px;width:300px;margin:auto;margin-top:20px;display:flex;flex-direction:column;gap:12px}
+.contact-box input, .contact-box textarea{padding:10px;border:none;border-radius:8px;background:rgba(255,255,255,0.05);color:#e6eef8}
+
+section{display:none;padding:22px 0}
+section.active{display:block}
+
+footer{padding:12px 22px;text-align:center;color:#9fbbe8;font-size:13px}
+
+@media (max-width:900px){
+  .hero{flex-direction:column;align-items:center;text-align:center}
+  .hero-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="app">
+<header>
+  <div class="brand">Portfolio</div>
+  <nav>
+    <button class="nav-btn" data-target="home">Home</button>
+    <button class="nav-btn" data-target="education">Education</button>
+    <button class="nav-btn" data-target="projects">Projects</button>
+    <button class="nav-btn" data-target="skills">Skills</button>
+    <button class="nav-btn" data-target="achievements">Achievements</button>
+    <button class="nav-btn" data-target="contact">Contact</button>
+  </nav>
+</header>
+
+<main class="container">
+<!-- Home -->
+<section id="home" class="active">
+  <div class="hero">
+    <div class="left"><div class="avatar"><img src="myphoto2.jpg" alt="myphoto2.jpg"></div></div>
+    <div class="right">
+      <h1>Sathya Priya R</h1>
+      <h2>Full Stack Developer</h2>
+      <h2>B.E. Electronics & Communication Engineering</h2>
+      <p>Final-year ECE student. Full-stack developer (Django, React) with experience in Python, C/C++, and IoT projects. Passionate about AI & ML.</p>
+      <div class="hero-links">
+        <a href="mailto:Sathyapriyas954@gmail.com">Email</a>
+        <a href="https://github.com/sathyapriya" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sathyapriya007676259" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="education-box"><h4>B.E - Electronics & Communication Engineering</h4>2022-2026<p>Adhiyamaan College of Engineering, Hosur<br> percentage : 84.4%</p></div>
+  <div class="education-box"><h4>HSC</h4>2021-2022<p>Sri Vijay Vidyalaya Higher Secondary School, Hosur<br>percentage: 79%</p></div>
+  <div class="education-box"><h4>SSLC</h4>2019-2020<p>Maharishi Vidhya Mandir Senior Secondary School, Hosur<br>percentage: 83.2%</p></div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="card"><h3>Mini E-Commerce Storefront</h3><p>Responsive e-commerce web app with product listing, cart & checkout simulation.. Implemented form validation and state management using Context API.</p><p>Technologies: React.js, JS, Tailwind CSS</p></div>
+  <div class="card"><h3>AI-Powered Brand Website Rebranding</h3><p>Rebranded a popular brand website using AI-powered content generation and modern frontend frameworks. Enhanced UI/UX design with responsive layouts, improved navigation, and AI-assisted branding assets.</p><p>Technologies: Next.js, Tailwind CSS, Figma, AI tools</p></div>
+  <div class="card"><h3>IoT-Based Smart Gas Leakage Detector</h3>Enhanced a sensor-enabled IoT system for gas leak detection with automatic valve shut-off and real-time SMS alerts</p><p>Technologies: Arduino, MQ-2, GSM Module, C/C++</p></div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="skills-box">
+    <h4>Technical Skills</h4>
+    <ul>
+      <li>Programming: Python, C, C++, JavaScript, HTML, CSS</li>
+      <li>Frameworks: Django, React.js</li>
+      <li>Databases: MySQL, MongoDB</li>
+      <li>Problem Solving: Data Structures & Algorithms (Leetcode, Codeforces)</li>
+      <li>Design & Development: UI/UX, Web Dev, Microsoft Office</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+  <div class="achieve-box">
+    <h4>Achievements & Internships</h4>
+    <ul>
+      <li>Master’s in Python Programming:(c,c++,python,Django,HTML,CSS,JS,Micro office)</li>
+      <li>Full Stack Web Dev Intern – Future Interns</li>
+      <li>Web Dev Intern – Infotech:(Wed Development)</li>
+      <li>Intern – Titan Company Limited</li>
+      <li>Workshops: IBM AI, UI/UX, ISRO Visit</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="contact-box">
+    <h3 style="text-align:center;">Contact Me</h3>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message" rows="4"></textarea>
+    <button id="sendBtn">Send Message</button>
+    <div class="hero-links" style="justify-content:center; margin-top:10px;">
+      <a href="mailto:Sathyapriyas954@gmail.com">Email</a>
+      <a href="https://github.com/sathyapriya" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sathyapriya007676259" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2025 Sathya Priya R — Built with HTML, CSS & JavaScript</footer>
+</div>
+
+<script>
+// Navigation
+const navButtons = document.querySelectorAll('.nav-btn');
+const sections = document.querySelectorAll('main section');
+function showSection(id){
+  sections.forEach(s => s.id===id ? s.classList.add('active') : s.classList.remove('active'));
+  window.location.hash = id;
+}
+navButtons.forEach(btn => btn.addEventListener('click', () => showSection(btn.dataset.target)));
+const hash = location.hash.replace('#',''); if(hash) showSection(hash);
+
+// Background stars
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
+let W=canvas.width=innerWidth, H=canvas.height=innerHeight;
+window.addEventListener('resize', ()=>{ W=canvas.width=innerWidth; H=canvas.height=innerHeight; initDots(); });
+let dots=[];
+function rand(min,max){ return Math.random()*(max-min)+min; }
+function initDots(){
+  dots.length=0;
+  let count = Math.round((W*H)/10000);
+  for(let i=0;i<count;i++){
+    dots.push({x:rand(0,W),y:rand(0,H),r:rand(0.5,2),vx:rand(-0.05,0.05),vy:rand(-0.05,0.05)});
+  }
+}
+initDots();
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  for(let d of dots){
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(${Math.floor(rand(150,255))},${Math.floor(rand(200,255))},${Math.floor(rand(200,255))},0.8)`;
+    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+    ctx.fill();
+    d.x += d.vx; d.y += d.vy;
+    if(d.x<0)d.x=W;if(d.x>W)d.x=0;
+    if(d.y<0)d.y=H;if(d.y>H)d.y=0;
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Button blink effect
+document.querySelectorAll('button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    btn.classList.add('blink');
+    setTimeout(()=>btn.classList.remove('blink'), 400); // remove after blink
+  });
+});
+</script>
+</body>
+</html>
