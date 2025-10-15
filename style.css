@@ -1,0 +1,251 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 1.8em;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #0ef;
+  color: #000;
+  border-radius: 8px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  margin-top: 90px;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #0ef;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 1.8em;
+  margin-top: 15px;
+}
+
+.hero h2, .hero h3 {
+  color: #0ef;
+  margin: 5px 0;
+}
+
+.hero p {
+  max-width: 500px;
+  margin: 10px auto;
+  font-size: 0.95em;
+}
+
+.hero-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-links a {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-links a:hover {
+  color: white;
+}
+
+/* SECTIONS */
+.education-box, .card, .skills-box, .achieve-box, .contact-box {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+/* CONTACT FORM */
+input, textarea {
+  width: 90%;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+button#sendBtn {
+  background: #0ef;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button#sendBtn:hover {
+  background: white;
+}
+
+/* FOOTER */
+footer {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 10px;
+    flex-direction: column;
+    width: 180px;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  .nav-btn {
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+}
+.skills-box ul li {
+  margin: 6px 0;
+  line-height: 1.6;
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 30px;
+}
+.skills-box {
+  line-height: 1.8;
+  padding: 25px;
+}
+.achieve-box ul li {
+  margin: 6px 0;
+  line-height: 1.6;
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.achieve-box {
+  line-height: 1.8;
+  padding: 25px;
+}
+.skills-box ul li,
+.achieve-box ul li {
+  margin: 6px 0;
+  line-height: 1.6;
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.skills-box,
+.achieve-box {
+  line-height: 1.8;
+  padding: 25px;
+}

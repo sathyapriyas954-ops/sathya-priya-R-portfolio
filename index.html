@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sathya Priya R | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <header class="navbar">
+    <div class="brand">Portfolio</div>
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+
+    <nav class="nav-links" id="navLinks">
+      <button class="nav-btn active" data-target="home">Home</button>
+      <button class="nav-btn" data-target="education">Education</button>
+      <button class="nav-btn" data-target="projects">Projects</button>
+      <button class="nav-btn" data-target="skills">Skills</button>
+      <button class="nav-btn" data-target="achievements">Achievements</button>
+      <button class="nav-btn" data-target="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Home -->
+    <section id="home" class="active">
+      <div class="hero">
+        <div class="avatar">
+          <img src="myphoto2.jpg" alt="Profile Photo" />
+        </div>
+        <h1>Sathya Priya R</h1>
+        <h2> Python Full Stack Developer</h2>
+        <h3>B.E. Electronics & Communication Engineering</h3>
+        <p>
+          Final-year ECE student. Full-stack developer (Django, React) with experience in Python, C/C++, and IoT projects. Passionate about AI & ML.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:Sathyapriyas954@gmail.com">Email</a>
+          <a href="https://github.com/sathyapriya" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sathyapriya007676259" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="education-box">
+        <h4>B.E - Electronics & Communication Engineering</h4>
+        2022–2026
+        <p>Adhiyamaan College of Engineering, Hosur<br>Percentage: 84.4%</p>
+      </div>
+      <div class="education-box">
+        <h4>HSC</h4>
+        2021–2022
+        <p>Sri Vijay Vidyalaya Higher Secondary School, Hosur<br>Percentage: 79%</p>
+      </div>
+      <div class="education-box">
+        <h4>SSLC</h4>
+        2019–2020
+        <p>Maharishi Vidhya Mandir Senior Secondary School, Hosur<br>Percentage: 83.2%</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="card">
+        <h3>Mini E-Commerce Storefront</h3>
+        <p>Responsive e-commerce web app with cart & checkout using React.js.</p>
+      </div>
+      <div class="card">
+        <h3>AI-Powered Brand Website</h3>
+        <p>AI-assisted UI/UX redesign using Next.js and Tailwind CSS.</p>
+      </div>
+      <div class="card">
+        <h3>IoT Smart Gas Detector</h3>
+        <p>Arduino-based system with MQ-6 sensor, GSM alerts, and auto power cutoff.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="skills-box">
+        <h4>Technical Skills</h4>
+        <ul>
+          <li>Programming - Python, C, C++, JavaScript, HTML, CSS</li>
+          <li>Framework - Django(Backend)</li>
+          <li>Databases - MySQL</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <div class="achieve-box">
+        <h4>Achievements & Internships</h4>
+        <ul>
+          <li>Full Stack Developer Intern – Future Interns</li>
+          <li>Web Development Intern – Infotech</li>
+      
+          <li>Intern – Titan Company Limited</li>
+          <li>Ashok Leyland Limited</li>
+
+          <li>Workshops: IBM AI, UI/UX, ISRO Visit</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="contact-box">
+        <h3>Contact Me</h3>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Message"></textarea>
+        <button id="sendBtn">Send Message</button>
+        <div class="hero-links">
+          <a href="mailto:Sathyapriyas954@gmail.com">Email</a>
+          <a href="https://github.com/sathyapriya" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sathyapriya007676259" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Sathya Priya R — Built</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
